@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<form action = "<?php echo Mage::getUrl('test/index/create') ?>" method = "post">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td>
+						<input type name="name" = "text"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td>
+						<input name = "address" type = "text"/>
+					</td>
+				</tr>			
+				<tr>
+					<td>Department</td>
+					<td>
+						<input name = "department" type = "text"/>
+					</td>
+				</tr>					
+				<tr>
+					<td></td>
+					<td>
+						<input type = "submit" value = "Create"/>
+						<a href = "<?php Mage::getUrl('test/index/create')?>?form=true">Go Back to Table</a>
+					</td>
+				</tr>				
+			</table>
+		</form>
+	</body>
+</html>

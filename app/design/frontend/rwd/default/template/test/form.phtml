@@ -1,7 +1,25 @@
 <html>
 	<body>
-		<table>
-			
+		<a href = "<?php echo Mage::getUrl('test/index/create') ?>">Add Record</a>
+		<br></br>
+		<table border = "1">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Department</th>
+				</tr>		
+     			<?php $data = $this->getData();?>
+<?php foreach ($data as $line) {?>
+				<tr>
+					<td><?php  echo $line->getId(); ?></td>
+					<td><?php  echo $line->getName(); ?></td>
+					<td><?php  echo $line->getAddress(); ?></td>
+					<td><?php  echo $line->getDepartment(); ?></td>
+					<td><a href = "<?php echo Mage::getUrl('test/index/edit') ?>?id=<?php echo $line->getId()?>">Edit</a></td>
+					<td><a href = "<?php echo Mage::getUrl('test/index/delete') ?>?id=<?php echo $line->getId()?>">Delete</a></td>
+				</tr>
+<?php } ?>
 		</table>
 	</body>
 </html>
