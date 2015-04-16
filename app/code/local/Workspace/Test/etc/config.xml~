@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+      <!-- NameSpace_moduleName -->
+        <Workspace_Test>
+            <version>0.1.0</version>
+        </Workspace_Test>
+         <!-- End -->
+    </modules>
+    <frontend>
+		<!-- Define route-->
+		<routers>			
+			<test>
+				<use>standard</use>
+				<args>
+                    <module>Workspace_Test</module>
+                    <frontName>test</frontName>
+                </args>			
+			</test>
+	   </routers>
+        <layout>
+            <updates>
+                <test>
+					<!-- app\design\frontend\default\default\layout -->
+                    <file>test.xml</file>
+                </test>
+            </updates>
+        </layout>	   
+   </frontend>
+    <global>
+		<blocks>
+			<test>
+				<class>Workspace_Test_Block</class>  <!-- Define the block folder -->
+			</test>
+		</blocks>
+		
+		<!-- Define Model -->
+		<models> <!-- defined tag -->
+			<test> <!-- module name -->
+				<class>Workspace_Test_Model</class> <!-- Workspace_Module_Model -->
+				<resourceModel>test_mysql4</resourceModel> <!-- module name _ resource model -->
+			</test>
+			<test_mysql4>  <!-- module_mysql4 -->
+				<class>Workspace_Test_Model_Mysql4</class> <!-- Workspace_Module_Model_Mysql4 -->   
+				<entities>
+					<shivam>  <!-- model name -->
+						<table>test</table> <!-- table name -->
+					</shivam>
+				</entities>
+			</test_mysql4>
+		</models>
+	</global>   
+</config>
+

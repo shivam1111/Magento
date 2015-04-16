@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <test_index_hello>
+       <reference name ="content">
+          <block type ="test/list" name ="hello" template ="test/hello.phtml"/>
+       </reference>
+    </test_index_hello>
+    
+    <test_index_form>
+    	<reference name = "content">
+    		<block type = "test/form" name = "form" template = "test/form.phtml"/>
+    	</reference>
+    </test_index_form>
+</layout> 
